@@ -22,3 +22,22 @@ function getCount(str) {
     
     return vowelsCount;
 }
+
+/**
+ * Count same ocurrencies quantity between x and o
+ * 
+ * @param {String} str String for checking
+ * @return {Boolean} If TRUE has same quantity. Otherwise FALSE.
+ */
+function XO(str) {
+    //code here
+    var qX = 0;
+    var qO = 0;
+    
+    str = str.replace(/[^xo]/gi, '');
+    
+    qX = str.match(/x/gi) || [];
+    qO = str.match(/o/gi) || [];
+    
+    return qX && qO && qX.length === qO.length;
+}
